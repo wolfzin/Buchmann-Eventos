@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Buchmann Restaurante & Eventos · Casamentos à beira do lago · Gaspar/SC</title>
+<meta name="description" content="Espaço para casamentos e eventos à beira do lago no Alto Gasparinho, Gaspar/SC. Almoço aberto ao público aos domingos, chalés, museu de antiguidades e pesque-pague.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--marfim:#F7F3EC;--lago:#4F6650;--salvia:#DCE3D5;--champ:#B8976A;--tijolo:#9A5B3F;--tinta:#26302A}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;font-weight:400;color:var(--tinta);background:var(--marfim);line-height:1.7}
+img{display:block;max-width:100%}
+a{color:inherit}
+.demo{background:var(--tinta);color:var(--marfim);text-align:center;font-size:.78rem;padding:.45rem 1rem;letter-spacing:.04em}
+.serif{font-family:'Cormorant Garamond',serif}
+.caps{text-transform:uppercase;letter-spacing:.28em;font-size:.72rem;font-weight:500}
+.wrap{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+/* nav */
+.nav{position:absolute;top:2.2rem;left:0;right:0;z-index:5;color:#fff}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center}
+.mono{width:46px;height:46px;border:1px solid currentColor;transform:rotate(45deg);display:grid;place-items:center}
+.mono span{transform:rotate(-45deg);font-family:'Cormorant Garamond';font-style:italic;font-size:1.6rem;line-height:1}
+.nav ul{display:flex;gap:2rem;list-style:none}
+.nav a{text-decoration:none}
+/* capa */
+.capa{position:relative;min-height:92vh;color:#fff;display:flex;align-items:flex-end;overflow:hidden}
+.capa>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.capa::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,28,22,.55) 0%,rgba(20,28,22,.15) 32%,rgba(20,28,22,.25) 50%,rgba(20,28,22,.82) 100%)}
+.capa .wrap{position:relative;z-index:2;width:100%;padding-bottom:3.5rem}
+.capa,.masthead{text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.masthead{position:absolute;top:5.6rem;left:0;right:0;text-align:center;z-index:2;font-family:'Cormorant Garamond';font-weight:500;font-size:clamp(3.4rem,13vw,11rem);letter-spacing:.08em;line-height:.9;text-transform:uppercase;color:rgba(255,255,255,.93)}
+.masthead small{display:block;font-family:'Jost';font-size:.75rem;letter-spacing:.5em;margin-top:.6rem;font-weight:500}
+.capa h1{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:clamp(2.2rem,4.6vw,3.9rem);line-height:1.05;max-width:15ch}
+.capa .row{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
+.capa p{max-width:42ch;margin:.8rem 0 1.4rem;font-weight:300;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;padding:1rem 1.6rem;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;border:1px solid transparent;transition:.2s}
+.btn.solid{background:var(--champ);color:#fff}
+.btn.solid:hover{background:#a5845a}
+.btn.ghost{border-color:currentColor}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.btn.lago{background:var(--lago);color:#fff}
+.cover-lines{text-align:right;font-family:'Cormorant Garamond';font-style:italic;font-size:1.25rem;line-height:1.5;border-right:1px solid rgba(255,255,255,.7);padding-right:1.2rem}
+.cover-lines b{font-family:'Jost';font-style:normal;font-weight:500;font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;display:block}
+/* sumário */
+section{padding:6rem 0}
+.sum-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--tinta);padding-bottom:.8rem;margin-bottom:2.5rem}
+.sum-head h2{font-family:'Cormorant Garamond';font-weight:500;font-style:italic;font-size:2.4rem;line-height:1.15}
+.sumario{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.sumario a{text-decoration:none;display:block}
+.sumario .ph{aspect-ratio:4/5;overflow:hidden}
+.sumario img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.sumario a:hover img{transform:scale(1.04)}
+.sumario .n{font-family:'Cormorant Garamond';font-style:italic;font-size:3.2rem;color:var(--champ);line-height:1;margin-top:1rem}
+.sumario h3{font-family:'Cormorant Garamond';font-weight:600;font-size:1.6rem;line-height:1.2}
+.sumario p{font-size:.92rem;color:#4a544c}
+/* matéria */
+.materia{background:#fff}
+.mat-top{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:3rem}
+.mat-top h2{font-family:'Cormorant Garamond';font-weight:400;font-size:clamp(2.6rem,5vw,4.6rem);line-height:1;font-style:italic}
+.mat-top h2 span{color:var(--lago)}
+.cols{columns:2;column-gap:2.5rem;font-size:1rem}
+.cols p{margin-bottom:1rem}
+.cols p:first-child::first-letter{font-family:'Cormorant Garamond';font-size:4.6rem;float:left;line-height:.8;padding:.35rem .6rem 0 0;color:var(--tijolo)}
+.galeria{display:grid;grid-template-columns:1.3fr .8fr 1fr;grid-template-rows:300px 260px;gap:1rem;margin:3rem 0}
+.galeria figure{overflow:hidden;position:relative}
+.galeria img{width:100%;height:100%;object-fit:cover}
+.galeria figure:nth-child(1){grid-row:span 2}
+.galeria figure:nth-child(4){grid-column:span 2}
+.galeria figcaption{position:absolute;bottom:.6rem;left:.6rem;background:rgba(247,243,236,.92);padding:.2rem .6rem;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase}
+.ficha{display:grid;grid-template-columns:1fr 1.4fr;gap:3rem;align-items:start;border-top:1px solid var(--tinta);padding-top:2.5rem}
+.ficha h3{font-family:'Cormorant Garamond';font-size:2rem;font-style:italic;font-weight:500}
+.ficha ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.2rem 2rem}
+.ficha li{padding:.55rem 0;border-bottom:1px solid #e5ded2;font-size:.95rem}
+.ficha li::before{content:"— ";color:var(--champ)}
+.nota{font-size:.8rem;color:#6b716c;margin-top:1rem;font-style:italic}
+.pull{margin:4rem auto 0;max-width:860px;text-align:center}
+.pull blockquote{font-family:'Cormorant Garamond';font-style:italic;font-size:clamp(1.5rem,2.8vw,2.2rem);line-height:1.3;color:var(--lago)}
+.pull cite{display:block;margin-top:1rem;font-style:normal}
+/* domingo */
+.domingo{background:var(--salvia)}
+.dom-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:center}
+.dom-grid h2{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:clamp(2.4rem,4.4vw,3.8rem);line-height:1.05;margin:.6rem 0 1.2rem}
+.horario{display:flex;gap:2.5rem;margin:1.5rem 0;flex-wrap:wrap}
+.horario div{border-left:1px solid var(--lago);padding-left:1rem}
+.horario b{font-family:'Cormorant Garamond';font-size:2.4rem;font-weight:500;display:block;line-height:1}
+.atr{list-style:none;counter-reset:a;margin:1.5rem 0 2rem}
+.atr li{counter-increment:a;display:flex;gap:1rem;padding:.6rem 0;border-bottom:1px solid rgba(38,48,42,.18)}
+.atr li::before{content:counter(a,decimal-leading-zero);font-family:'Cormorant Garamond';font-style:italic;color:var(--tijolo);font-size:1.2rem;min-width:2rem}
+.dom-photos{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.dom-photos img{width:100%;height:260px;object-fit:cover}
+.dom-photos img:first-child{grid-column:span 2;height:340px}
+/* chalés */
+.chales{display:grid;grid-template-columns:1.2fr 1fr;gap:0;align-items:stretch;background:var(--lago);color:var(--marfim)}
+.chales .ph{min-height:520px;position:relative}
+.chales .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chales .txt{padding:4.5rem 3.5rem;display:flex;flex-direction:column;justify-content:center}
+.chales h2{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:3rem;line-height:1.05;margin:.6rem 0 1rem}
+.chales blockquote{font-family:'Cormorant Garamond';font-style:italic;font-size:1.35rem;line-height:1.4;border-left:1px solid var(--champ);padding-left:1.2rem;margin:1.5rem 0}
+.chales cite{font-style:normal}
+/* agenda */
+.agenda .card{display:grid;grid-template-columns:auto 1fr auto;gap:2.5rem;align-items:center;border:1px solid var(--tinta);padding:2.2rem 2.5rem;background:#fff}
+.agenda .data{text-align:center;border-right:1px solid var(--champ);padding-right:2.5rem}
+.agenda .data b{font-family:'Cormorant Garamond';font-size:4.4rem;font-weight:500;line-height:.9;display:block}
+.agenda h3{font-family:'Cormorant Garamond';font-size:2rem;font-weight:500;font-style:italic;line-height:1.1}
+.agenda p{font-size:.95rem}
+/* avaliações */
+.reviews .score{font-family:'Cormorant Garamond';font-size:5rem;font-weight:400;line-height:1;color:var(--lago)}
+.rev-grid{display:grid;grid-template-columns:.7fr 1fr 1fr;gap:3rem;align-items:start}
+.rev-grid figure blockquote{font-family:'Cormorant Garamond';font-size:1.3rem;line-height:1.4;font-style:italic}
+.rev-grid figcaption{margin-top:.8rem}
+/* contato */
+.contato{background:var(--tinta);color:var(--marfim)}
+.ct-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+.contato h2{font-family:'Cormorant Garamond';font-style:italic;font-weight:500;font-size:3.2rem;line-height:1.05;margin:.6rem 0 1.5rem}
+.contato dl{display:grid;grid-template-columns:auto 1fr;gap:.7rem 1.5rem;font-size:.98rem}
+.contato dt{color:var(--champ)}
+.contato .ph{height:100%;min-height:380px;position:relative}
+.contato .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.9)}
+footer{background:#1b221d;color:#c9cfc6;padding:1.6rem 0;font-size:.8rem}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.pill{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:30;background:var(--lago);color:#fff;text-decoration:none;padding:.85rem 1.5rem;border-radius:999px;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;box-shadow:0 8px 24px rgba(0,0,0,.25);display:none}
+@media (max-width:900px){
+ .nav ul{display:none}
+ .masthead{top:5rem}
+ .masthead small{font-size:.6rem;letter-spacing:.3em}
+ .capa{min-height:100svh}
+ .capa .caps{font-size:.62rem}
+ .capa{min-height:88vh}
+ .cover-lines{display:none}
+ .sumario,.mat-top,.ficha,.dom-grid,.chales,.rev-grid,.ct-grid{grid-template-columns:1fr}
+ .mat-top{gap:1.5rem}
+ .cols{columns:1}
+ .galeria{grid-template-columns:1fr 1fr;grid-template-rows:240px 180px 180px}
+ .galeria figure:nth-child(1){grid-row:auto;grid-column:span 2}
+ .galeria figure:nth-child(4){grid-column:span 1}
+ .ficha ul{grid-template-columns:1fr}
+ .chales .ph{min-height:300px}
+ .chales .txt{padding:3rem 1.5rem}
+ .agenda .card{grid-template-columns:1fr;gap:1.2rem;padding:1.8rem}
+ .agenda .data{border-right:0;border-bottom:1px solid var(--champ);padding:0 0 1rem;text-align:left}
+ section{padding:4.2rem 0}
+ .pill{display:inline-block}
+ .sum-head{flex-direction:column;gap:.3rem}
+}
+/* ===== Movimento (WolfStudio v3) — só roda com JS e sem "reduzir movimento" ===== */
+:root{--e:cubic-bezier(.2,.7,.2,1)}
+.anim :is(.sum-head,.sumario a,.mat-top>div,.galeria figure,.ficha>*,.pull,.dom-grid>div,.chales .txt>*,.agenda .card,.rev-grid>*,.ct-grid>*){transition:opacity .7s var(--e) var(--d,0ms),translate .8s var(--e) var(--d,0ms),scale .8s var(--e) var(--d,0ms),rotate .8s var(--e) var(--d,0ms),transform .35s var(--e),box-shadow .35s,border-color .25s,background-color .25s}
+.anim :is(.sum-head,.sumario a,.mat-top>div,.galeria figure,.ficha>*,.pull,.dom-grid>div,.chales .txt>*,.agenda .card,.rev-grid>*,.ct-grid>*):not(.in){opacity:0;translate:var(--tx,0px) var(--ty,22px);scale:var(--sc,1)}
+@keyframes sobe{from{opacity:0;translate:0 18px}}
+@keyframes gira{to{rotate:360deg}}
+@media print{.anim *{opacity:1!important;translate:none!important;scale:none!important;clip-path:none!important}}
+[id]{scroll-margin-top:8px}
+/* botões e menu */
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 22px -14px rgba(20,28,22,.8)}
+.btn:active{transform:translateY(0)}
+.nav ul a{position:relative}
+.nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-.4rem;height:1px;background:currentColor;scale:0 1;transform-origin:0 50%;transition:scale .4s var(--e)}
+.nav ul a:hover::after{scale:1 1}
+/* capa: a foto assenta, o título "BUCHMANN" fecha o espaçamento, o texto sobe */
+.capa>img{scale:1.06;translate:0 var(--py,0px);animation:kb 2.6s var(--e) both}
+@keyframes kb{from{scale:1.18}}
+.nav{animation:desce .8s var(--e) both}
+@keyframes desce{from{opacity:0;translate:0 -12px}}
+.masthead{animation:masthead 1.6s var(--e) .1s both}
+@keyframes masthead{from{opacity:0;letter-spacing:.24em}}
+.capa .row>div:first-child>*{animation:sobe .9s var(--e) .5s both}
+.capa .row>div:first-child>:nth-child(2){animation-delay:.62s}.capa .row>div:first-child>:nth-child(3){animation-delay:.74s}.capa .row>div:first-child>:nth-child(4){animation-delay:.86s}
+.cover-lines{animation:sobe .9s var(--e) 1s both}
+/* sumário e matéria */
+.sumario .n{transition:translate .7s var(--e) calc(var(--d,0ms) + .2s),opacity .7s calc(var(--d,0ms) + .2s)}
+.anim .sumario a:not(.in) .n{translate:-16px 0;opacity:0}
+.galeria img{transition:scale 1.4s var(--e)}
+.galeria figure:hover img{scale:1.05}
+.anim .galeria figure{--sc:.97}
+.ficha li{transition:opacity .5s var(--e) calc(.2s + var(--k,0)*.05s),translate .5s var(--e) calc(.2s + var(--k,0)*.05s)}
+.anim .ficha>ul:not(.in) li{opacity:0;translate:0 8px}
+.ficha li:nth-child(2){--k:1}.ficha li:nth-child(3){--k:2}.ficha li:nth-child(4){--k:3}.ficha li:nth-child(5){--k:4}.ficha li:nth-child(6){--k:5}.ficha li:nth-child(7){--k:6}.ficha li:nth-child(8){--k:7}.ficha li:nth-child(9){--k:8}.ficha li:nth-child(10){--k:9}
+/* domingo: as atrações entram uma a uma */
+.atr li{transition:opacity .5s var(--e) calc(.35s + var(--k,0)*.09s),translate .5s var(--e) calc(.35s + var(--k,0)*.09s)}
+.anim .dom-grid>div:not(.in) .atr li{opacity:0;translate:0 10px}
+.atr li:nth-child(2){--k:1}.atr li:nth-child(3){--k:2}.atr li:nth-child(4){--k:3}.atr li:nth-child(5){--k:4}
+/* chalés e contato: foto com zoom lento */
+.chales .ph,.contato .ph{overflow:hidden}
+.chales .ph img,.contato .ph img{transition:scale 1.8s var(--e)}
+.chales:hover .ph img,.contato .ph:hover img{scale:1.05}
+.agenda .card:hover{transform:translateY(-3px);box-shadow:0 18px 30px -24px rgba(38,48,42,.7)}
+.reviews .score{font-variant-numeric:tabular-nums}
+/* botão flutuante do celular */
+.pill{animation:sobe-pill .7s var(--e) 1.2s both}
+@keyframes sobe-pill{from{translate:0 160%}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<script>(function(d){if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches)d.classList.add('anim')})(document.documentElement)</script>
+</head>
+<body>
+<div class="demo" role="note">Demonstração WolfStudio — não é o site oficial.</div>
+
+<header class="capa">
+ <img src="assets/lago-casa-morro.jpg" alt="Lago espelhado com a casa e o morro ao fundo, na Buchmann">
+ <nav class="nav"><div class="wrap">
+  <div class="mono" aria-label="Buchmann"><span>B</span></div>
+  <ul class="caps"><li><a href="#casamentos">Casamentos</a></li><li><a href="#domingo">Domingo</a></li><li><a href="#chales">Chalés</a></li><li><a href="#contato">Contato</a></li></ul>
+ </div></nav>
+ <div class="masthead">Buchmann<small>RESTAURANTE &amp; EVENTOS · GASPAR/SC</small></div>
+ <div class="wrap">
+  <div class="row">
+   <div>
+    <p class="caps">Rota Villa D'Itália · Alto Gasparinho</p>
+    <h1>Casar à beira do lago, no meio do verde.</h1>
+    <p>Cerimônia ao ar livre, salão climatizado e gastronomia própria. Aos domingos, almoço aberto ao público com buffet livre.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap">
+     <a class="btn solid" href="https://wa.me/5547999720314?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20evento%20na%20Buchmann." target="_blank" rel="noopener">Pedir orçamento</a>
+     <a class="btn ghost" href="https://wa.me/5547999720314?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20o%20almo%C3%A7o%20de%20domingo." target="_blank" rel="noopener">Reservar o domingo</a>
+    </div>
+   </div>
+   <div class="cover-lines"><b>Nesta página</b>Casamentos à beira do lago<br>Domingo em família<br>Chalés para os convidados<br>4,8 ★ em 794 avaliações</div>
+  </div>
+ </div>
+</header>
+
+<main>
+<section>
+ <div class="wrap">
+  <div class="sum-head"><h2>Três jeitos de viver a Buchmann</h2><span class="caps">Sumário</span></div>
+  <div class="sumario">
+   <a href="#casamentos"><div class="ph"><img src="assets/portal-salao-decorado-evento.jpg" alt="Salão decorado para evento, com parede de tijolos e luzes"></div><div class="n">01</div><h3>Casamentos e eventos</h3><p>Casamentos, aniversários, eventos corporativos e grupos, de terça a sábado.</p></a>
+   <a href="#domingo"><div class="ph"><img src="assets/portal-roda-dagua.jpg" alt="Roda d'água decorativa no jardim"></div><div class="n">02</div><h3>Domingo em família</h3><p>Buffet livre, pesque-pague, museu de antiguidades e passeio a cavalo.</p></a>
+   <a href="#chales"><div class="ph"><img src="assets/lago-chales.jpg" alt="Chalés de madeira à beira do lago"></div><div class="n">03</div><h3>Chalés</h3><p>Hospedagem no próprio espaço, à beira do lago.</p></a>
+  </div>
+ </div>
+</section>
+
+<section id="casamentos" class="materia">
+ <div class="wrap">
+  <div class="mat-top">
+   <div><p class="caps" style="color:var(--tijolo)">01 · Casamentos</p><h2>A lagoa como cenário, <span>o jardim como altar.</span></h2></div>
+   <div class="cols">
+    <p>A cerimônia pode ser ao ar livre, com a lagoa e a mata ao fundo. Depois, a festa segue para o salão climatizado de tijolo à vista, com a gastronomia da própria casa.</p>
+    <p>Para os noivos, há um chalé exclusivo. Para os convidados que vêm de longe, uma casa para hospedagem no próprio espaço.</p>
+   </div>
+  </div>
+  <div class="galeria">
+   <figure><img src="assets/altar-arco-iluminado-noite.jpg" alt="Altar com arco iluminado à noite"><figcaption>Altar iluminado</figcaption></figure>
+   <figure><img src="assets/lago-tenda-branca.jpg" alt="Tenda branca montada à beira da lagoa"><figcaption>Tenda na lagoa</figcaption></figure>
+   <figure><img src="assets/buffet-evento-mesa-branca.jpg" alt="Mesa de buffet com toalha branca e flores"><figcaption>Buffet do evento</figcaption></figure>
+   <figure><img src="assets/portal-salao-restaurante.jpg" alt="Salão com teto de madeira e lustres de roda de carroça"><figcaption>Salão</figcaption></figure>
+  </div>
+  <div class="ficha">
+   <div><h3>O que o espaço oferece</h3><p class="nota">Lista do anúncio da Buchmann no casamentos.com.br. Capacidade, menus e valores: a confirmar pelo WhatsApp (o anúncio cita faixas diferentes).</p>
+    <a class="btn lago" style="margin-top:1.2rem" href="https://wa.me/5547999720314?text=Ol%C3%A1!%20Gostaria%20de%20saber%20datas%20e%20valores%20para%20casamento%20na%20Buchmann." target="_blank" rel="noopener">Consultar datas</a></div>
+   <ul>
+    <li>Cerimônia ao ar livre</li><li>Lagoa para cerimônia e fotos</li><li>Salão climatizado</li><li>Gastronomia própria</li><li>Mesas, cadeiras e louças</li><li>Chalé exclusivo para os noivos</li><li>Casa para hospedar convidados</li><li>Espaço kids</li><li>Estacionamento privativo</li><li>Gerador de energia</li>
+   </ul>
+  </div>
+  <figure class="pull"><blockquote>“Organização, atenção e cuidado em todos os detalhes. Belíssimo cenário e palco onde a natureza é a essência do encanto para lindas celebrações.”</blockquote><cite class="caps">@josenorbeycelebrante, celebrante de casamentos · Google · 23/06/2025</cite></figure>
+ </div>
+</section>
+
+<section id="domingo" class="domingo">
+ <div class="wrap dom-grid">
+  <div>
+   <p class="caps" style="color:var(--tijolo)">02 · Domingo em família</p>
+   <h2>Um domingo inteiro no Alto Gasparinho.</h2>
+   <p>Aberto ao público aos domingos, com buffet livre de comida típica italiana e churrasco.</p>
+   <div class="horario"><div><span class="caps">Aberto</span><b>10h–16h</b></div><div><span class="caps">Buffet a partir de</span><b>11h30</b></div></div>
+   <ol class="atr"><li>Pesque-pague no lago</li><li>Museu de antiguidades</li><li>Engenhos de cachaça e de farinha</li><li>Parque para as crianças e salão de jogos</li><li>Passeio a cavalo</li></ol>
+   <a class="btn lago" href="https://wa.me/5547999720314?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20o%20almo%C3%A7o%20de%20domingo." target="_blank" rel="noopener">Reservar mesa · valores pelo WhatsApp</a>
+  </div>
+  <div class="dom-photos">
+   <img src="assets/deck-restaurante.jpg" alt="Deck do restaurante com mesas de madeira e vista">
+   <img src="assets/museu-antiguidades.jpg" alt="Objetos antigos no museu de antiguidades">
+   <img src="assets/cavalos-pasto.jpg" alt="Cavalos pastando no gramado">
+  </div>
+ </div>
+</section>
+
+<section id="chales" style="padding:0">
+ <div class="chales">
+  <div class="ph"><img src="assets/chale-interior-janela.jpg" alt="Interior de chalé com janela de cortinas e mesa"></div>
+  <div class="txt">
+   <p class="caps" style="color:var(--champ)">03 · Chalés</p>
+   <h2>Dormir à beira do lago.</h2>
+   <p>Para quem vem a um casamento ou quer estender o domingo: os chalés ficam dentro do espaço. Quantidade, datas e valores pelo WhatsApp.</p>
+   <blockquote>“Fomos convidados de um casamento no espaço e resolvemos alugar um chalé tbm. Foi ótimo!!! (...) No dia seguinte deixam uma cesta repleta de comida gostosa para o café da manhã.”<br><cite class="caps" style="font-size:.66rem">Avaliação no Google · 01/12/2024</cite></blockquote>
+   <div><a class="btn solid" href="https://wa.me/5547999720314?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20os%20chal%C3%A9s." target="_blank" rel="noopener">Perguntar sobre os chalés</a></div>
+  </div>
+ </div>
+</section>
+
+<section class="agenda">
+ <div class="wrap">
+  <div class="sum-head"><h2>Na agenda</h2><span class="caps">Publicado pela Buchmann em 05/10/2026</span></div>
+  <div class="card">
+   <div class="data"><b>11</b><span class="caps">outubro · domingo</span></div>
+   <div><h3>Almoço especial de Dia das Crianças</h3><p>Com personagens infantis. R$ 99,00 por pessoa; crianças de 6 a 10 anos pagam 50%; até 5 anos não pagam.</p></div>
+   <a class="btn lago" href="https://wa.me/5547999720314?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20o%20almo%C3%A7o%20de%20Dia%20das%20Crian%C3%A7as%20(11%2F10)." target="_blank" rel="noopener">Reservar</a>
+  </div>
+ </div>
+</section>
+
+<section class="reviews" style="padding-top:2rem">
+ <div class="wrap rev-grid">
+  <div><div class="score">4,8 ★</div><p class="caps">794 avaliações no Google</p></div>
+  <figure><blockquote>“Local muito organizado, conheci através de um casamento. Tudo muito limpo e comida deliciosa.”</blockquote><figcaption class="caps">Avaliação no Google (via Restaurant Guru)</figcaption></figure>
+  <figure><blockquote>“A comida é sensacional! Tem pescaria, passeio de trator, pônei para as crianças.”</blockquote><figcaption class="caps">Avaliação no Google (via Restaurant Guru)</figcaption></figure>
+ </div>
+</section>
+
+<section id="contato" class="contato">
+ <div class="wrap ct-grid">
+  <div>
+   <p class="caps" style="color:var(--champ)">Contato</p>
+   <h2>Vamos marcar uma visita?</h2>
+   <dl>
+    <dt>Endereço</dt><dd>Rua José Rampelotti, 149 · Alto Gasparinho · Gaspar/SC</dd>
+    <dt>WhatsApp</dt><dd>(47) 99972-0314 (reservas e informações)</dd>
+    <dt>Telefone</dt><dd>(47) 3308-4750</dd>
+    <dt>E-mail</dt><dd>buchmanneventos@gmail.com</dd>
+    <dt>Instagram</dt><dd>@buchmanneventos</dd>
+   </dl>
+   <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem">
+    <a class="btn solid" href="https://wa.me/5547999720314?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20na%20Buchmann." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    <a class="btn ghost" href="https://www.google.com/maps?cid=12891754375953248135" target="_blank" rel="noopener">Ver no mapa</a>
+   </div>
+  </div>
+  <div class="ph"><img src="assets/portal-jardim-flores.jpg" alt="Jardim com flores coloridas"></div>
+ </div>
+</section>
+</main>
+
+<footer><div class="wrap"><p>Buchmann Restaurante &amp; Eventos · Gaspar/SC</p><p>Demonstração feita pela WolfStudio. Não é o site oficial da Buchmann. Fotos públicas do Google Maps, do portal de turismo de Gaspar e da página do Facebook da Buchmann, usadas só nesta demonstração.</p></div></footer>
+<a class="pill" href="https://wa.me/5547999720314?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Buchmann." target="_blank" rel="noopener">WhatsApp · Reservas</a>
+<script>
+/* Movimento (WolfStudio v3): revelar ao rolar, contadores e menu ativo. */
+(function(){
+  var R=document.documentElement; if(!R.classList.contains('anim')) return;
+  try{
+    var SEL='.sum-head,.sumario a,.mat-top>div,.galeria figure,.ficha>*,.pull,.dom-grid>div,.chales .txt>*,.agenda .card,.rev-grid>*,.ct-grid>*', CNT='.reviews .score';
+    var io=new IntersectionObserver(function(es){
+      var n=0;
+      es.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el=e.target; io.unobserve(el);
+        if(n) el.style.setProperty('--d',Math.min(n,7)*90+'ms');
+        n++; el.classList.add('in');
+        setTimeout(function(){el.style.removeProperty('--d')},1700);
+      });
+    },{threshold:.08,rootMargin:'0px 0px -5% 0px'});
+    var pend=[].slice.call(document.querySelectorAll(SEL));
+    pend.forEach(function(el){io.observe(el)});
+    /* rolagem rápida pode pular um bloco: o que já ficou para cima aparece sem esperar */
+    var tv=0;
+    function varre(){pend=pend.filter(function(el){
+      if(el.classList.contains('in')) return false;
+      if(el.getBoundingClientRect().bottom<0){io.unobserve(el);el.classList.add('in');return false}
+      return true;
+    })}
+
+    function conta(el){
+      var tn=null;
+      [].some.call(el.childNodes,function(c){if(c.nodeType===3&&/\d,\d/.test(c.nodeValue)){tn=c;return true}});
+      if(!tn) return;
+      var full=tn.nodeValue, m=full.match(/(\d+),(\d)/), alvo=parseFloat(m[1]+'.'+m[2]), t0=null;
+      function f(t){
+        if(!t0) t0=t;
+        var p=Math.min(1,(t-t0)/1100), v=alvo*(1-Math.pow(1-p,3));
+        tn.nodeValue=p<1?full.replace(m[0],v.toFixed(1).replace('.',',')):full;
+        if(p<1) requestAnimationFrame(f);
+      }
+      requestAnimationFrame(f);
+    }
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){cio.unobserve(e.target);conta(e.target)}})},{threshold:.6});
+    [].forEach.call(document.querySelectorAll(CNT),function(el){cio.observe(el)});
+
+    var links=[].slice.call(document.querySelectorAll('nav a[href^="#"]')), mapa={};
+    var sio=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      links.forEach(function(a){a.classList.remove('on')}); mapa[e.target.id].classList.add('on');
+    })},{rootMargin:'-40% 0px -55% 0px'});
+    links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1)); if(s&&s.id!=='conteudo'){mapa[s.id]=a;sio.observe(s)}});
+
+    var hero=document.querySelector('.capa>img');
+    var espera=false;
+    function rolar(){
+      espera=false; var y=window.scrollY||0;
+      R.classList.toggle('rolou',y>8);
+      clearTimeout(tv); if(pend.length) tv=setTimeout(varre,180);
+      if(y<160) links.forEach(function(a){a.classList.remove('on')});
+      if(hero&&y<innerHeight) hero.style.setProperty('--py',Math.min(y*.05,hero.offsetHeight*.026).toFixed(1)+'px');
+    }
+    window.addEventListener('scroll',function(){if(!espera){espera=true;requestAnimationFrame(rolar)}},{passive:true});
+    window.addEventListener('resize',rolar);
+    rolar();
+
+  }catch(err){R.classList.remove('anim')}
+})();
+</script>
+</body>
+</html>
